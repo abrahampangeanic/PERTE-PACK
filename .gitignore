@@ -1,2 +1,4 @@
 ./strapi/.env
 ./front/.env
+front/.env
+strapi/.env
