@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: perte-front
+    ports:
+      - "3000:3000"
+    depends_on:
+      - strapi
+  strapi:
+    build: 
+      context: ./strapi
+      dockerfile: Dockerfile
+    container_name: perte-strapi
+    ports:
+      - "1337:1337"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
