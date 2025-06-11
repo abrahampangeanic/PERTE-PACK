@@ -2,3 +2,4 @@
 ./front/.env
 front/.env
 strapi/.env
+.env

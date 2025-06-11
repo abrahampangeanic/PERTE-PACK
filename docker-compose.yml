@@ -5,6 +5,8 @@ services:
     build:
       context: ./front
       dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
     container_name: perte-front
     ports:
       - "3000:3000"
@@ -14,6 +16,8 @@ services:
     build: 
       context: ./strapi
       dockerfile: Dockerfile
+      args:
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
     container_name: perte-strapi
     ports:
       - "1337:1337"

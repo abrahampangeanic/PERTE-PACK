@@ -7,8 +7,12 @@ RUN apk add --no-cache git openssl
 # Define el directorio de trabajo
 WORKDIR /app
 
-# Clona el repositorio directamente de la rama main
-RUN git clone --branch main https://github.com/Pangeamt/PERTE-VUEJS.git .
+# # Clona el repositorio directamente de la rama main
+# RUN git clone --branch main https://github.com/Pangeamt/PERTE-VUEJS.git .
+
+ARG GITHUB_TOKEN
+RUN git clone https://$GITHUB_TOKEN@github.com/Pangeamt/PERTE-VUEJS.git .
+
 
 # Copia el archivo .env
 COPY .env ./
