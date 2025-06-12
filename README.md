@@ -25,6 +25,7 @@ The project structure is organized with two main directories for the application
 │   ├── .env 
 │   └── Dockerfile
 ├── docker-compose.yml          # Docker Compose service configuration
+├── .env
 └── README.md                   # This file
 ```
 

@@ -26,4 +26,4 @@ RUN npm run build
 EXPOSE 1337
 
 # Inicia la aplicación Next.js
-CMD ["pnpm", "run", "start"]
+CMD ["npm", "run", "start"]

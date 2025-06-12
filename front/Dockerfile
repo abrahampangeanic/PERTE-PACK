@@ -27,4 +27,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Inicia la aplicación Next.js
-CMD ["pnpm", "run", "preview"]
+CMD ["npm", "run", "preview"]
